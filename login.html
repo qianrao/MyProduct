@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>登录页面</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <style>
+	#main{
+		margin:0;
+		padding:0;
+		margin:0 auto;
+		width:1920px;
+	}
+	#section{
+		width:1920px;
+		margin:0 auto;
+		position:relative;
+	}
+	#bj{
+		width:1920px;
+		height:800px;
+		background:url(img/login/login.jpg) no-repeat center;
+	}
+	#cover{
+		width:500px;
+		height:500px;
+		background:rgba(255,255,255,0.3);
+		margin-left:300px;
+		position:absolute;
+		margin-top:-660px;
+	}
+	#cover .txt{
+		width:400px;
+		height:277px;
+		margin:10px;
+		margin:0 auto;
+	}
+	#cover .txt p.yong{
+		width:400px;
+		height:30px;
+		font-size:28px;
+		font-weight:bold;
+		color:#fff;
+		text-align:center;
+		margin:20px 0px 10px 0px;
+		padding-bottom:10px;
+		border-bottom:1px solid #fff;
+	}
+	#cover .txt span{
+		margin-left:280px;
+	}
+	#cover .txt a{
+		font-size:16px;
+		text-decoration:none;
+		color:#fff;
+	}
+	#cover .txt a:hover{
+		color:blue;
+	}
+	#cover .txt p.re{
+		font-size:16px;
+		color:#fff;
+		margin-top:12px;
+		margin-left:10px;
+	}
+	#cover .txt p.re_yong{
+		font-size:16px;
+		color:#fff;
+		margin-top:60px;
+		margin-left:10px;
+	}
+	#cover .txt p.reg{
+		font-size:16px;
+		color:#fff;
+		margin-top:30px;
+		margin-left:10px;
+	}
+	#cover .text{
+		width:300px;
+		height:42px;
+		background-color:#fff;
+		margin:35px 0px 50px 80px;
+
+	} 
+	#uname{
+		width:290px;
+		padding:10px 0px;
+		font-size:16px;
+		color:gray;
+		border:none;
+		background:url(img/login/yhm.png) no-repeat 260px 7px;
+	}
+	#upwd{
+		width:290px;
+		padding:10px 0px;
+		font-size:16px;
+		color:gray;
+		border:none;
+		background:url(img/login/mm.png) no-repeat 260px 7px;
+	}
+	#cover .txt .login{
+		color:#fff;
+		font-size:14px;
+		margin:50px 0px 0px 40px;
+	}
+	#cover .txt .login span{
+		margin-left:150px;
+	}
+	#btu{
+		width:300px;
+		height:37px;
+		background:#1EABF3;
+		color:#fff;
+		margin: 20px 0 0 50px;
+	}
+	.btn{
+		display: inline-block;
+		margin-left: 100px;
+		color:#fff;
+		font-size:24px;
+		font-weight:bold;
+		margin-top: 10px;
+	  }
+
+	  input.error{
+        box-shadow: 0 0 10px red;
+      }
+      label.error{
+        background-image:url(img/login/err.png);
+        color:red;
+        background-repeat:no-repeat;
+        background-position:left;
+        background-size: 25px 25px;
+        padding-left:25px;
+        margin-left:10px;
+        font-style: italic;
+		font-size:16px;
+      }
+      div.error{
+        box-shadow: 0 0 10px red;
+        display:none;
+      }
+      div.error>label.error{
+        display:block;
+        margin-left:1em;
+        color:red;
+        font-style: italic;
+      }
+
+  </style>
+  
+ </head>
+ <body>
+	<div id="main">
+		<header id="header">
+<!-- 			<iframe src="header.html" frameborder="0"></iframe> -->
+		</header>
+		<section id="section">
+			<div id="bj"></div>
+			<div id="cover">
+				<form class="form_login" id="form">
+					<table></table>
+					<div class="txt">
+						<p class="yong">
+							用户登录
+						</p>
+						<span>
+								<a href="#">新用户注册</a>
+						</span>	
+						<p class="re re_yong lf">用 户 名</p>
+						<div class="text">
+							<label>
+								<input type="text" id="uname"  name="uname" placeholder="用户名登录" required>
+							</label>
+						</div>
+						<p class="re lf">密 &nbsp;&nbsp;&nbsp;码</p>
+						<div class="text">
+							<label>
+								<input type="password"  id="upwd" name="upwd" placeholder="用户名登录密码" required>
+							</label>
+						</div>
+						<div class="login">
+							<input type="checkbox" id="checkbox">自动登录<span><a href="#">忘记密码？</a></span>
+						</div>
+						<div id="btu" name="usubmit">
+							<a href="" class="btn btn-default" >&nbsp;登&nbsp;&nbsp;&nbsp;录&nbsp;</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
+		<footer id="footer">
+<!-- 			<iframe src="footer.html" frameborder="0"></iframe> -->
+		</footer>	
+	</div>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.validate.js"></script>
+	<script src="js/ajax.js"></script>
+	<script src="js/header.js"></script>
+	<script src="js/footer.js"></script>
+	<script>
+		$("#form").validate({
+			rules:{
+				uname:{
+					required:true,
+					minlength:2
+				},
+				upwd{
+					required:true,
+					rangelength:[6,8]
+				}
+			},
+			messages:{
+				uname:{
+					required:"用户名不能为空",
+					minlength:"至少2个字符以上"
+				},
+				upwd{
+					required:"密码不能为空"
+					rangelength:"密码长度必须6~8位"
+				}
+			}
+		});
+	</script>
+	<script src="js/login.js"></script>
+
+ </body>
+</html>
+

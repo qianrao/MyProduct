@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>注册</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <style>
+	#register{
+		width:1920px;
+		height:800px;
+		margin:0 auto;
+		background:url(img/login/res.jpg) no-repeat;
+	}
+	#register>.container{
+		width:500px;
+		height:460px;
+		border:1px solid gray;
+		margin-left:80px;
+		margin-top:50px;
+		font-size:26px;
+		color:#fff;
+		background:rgba(0,0,0,0.2);
+	}
+	.container>p.title{
+		display:block;
+		width:85%;
+		border-bottom:1px solid gray; 
+		margin:0 auto;
+		margin-top:10px;
+		padding-bottom:10px;
+		text-align:center;
+		letter-spacing:10px;
+		font-size:30px;
+		color:#fff;
+		font-weight:bold;
+	}
+	#register>.container input{
+		width:400px;
+		height:40px;
+		background:#fff;
+		font-size:15px;
+	}
+	p.uname,p.upwd,p.cpwd{
+		position:relative;
+		width:400px;
+		height:40px;
+		line-height:40px;
+		margin:0 auto;
+		text-align:center;
+	}
+	p.uname{
+		margin-top:30px;
+	}
+	p.upwd{
+		margin-top:30px;
+	}
+	p.cpwd{
+		margin-top:30px;
+	}
+	.container>p.title-top,.container>p.title-middle,.container>p.title-bottom,.container>p.btn-top{
+		width:85%;
+		margin:0 auto;
+		font-size:15px;
+		position:relative;
+		left:15px;
+		top:25px;
+	}
+	.container>p.title-middle>span,
+	.container>p.title-top>span,
+	.container>p.title-bottom>span{
+		position:absolute;
+		right:30px;
+	}
+	.container>#register-btn{
+		display:block;
+		width:405px;
+		height:50px;
+		margin:0 auto;
+		background:	#5CACEE;
+		margin-top:50px;
+		color:#fff;
+		text-decoration:none;
+		text-align:center;
+		line-height:50px;
+		letter-spacing:15px;
+		transition:all 1s;
+	}
+	.container>p.btn-top>span{
+		position:absolute;
+		right:100px;
+	}
+	.container>p.btn-top>a{
+		text-decoration:none;
+		position:absolute;
+		right:30px;
+		color:#0980DC;
+	}
+	.container>#register-btn:hover{
+		background:#FB5E33;
+	}
+	.err{
+		color:#FB5E33;
+	}
+	.ok{
+		color:green;
+	}
+
+	input.error{
+        box-shadow: 0 0 10px red;
+      }
+      label.error{
+        background-image:url(../imgs/err.png);
+        color:red;
+        background-repeat:no-repeat;
+        background-position:left;
+        background-size: 25px 25px;
+        padding-left:25px;
+        margin-left:10px;
+        font-style: italic;
+      }
+      div.error{
+        box-shadow: 0 0 10px red;
+        display:none;
+      }
+      div.error>label.error{
+        display:block;
+        margin-left:1em;
+        color:red;
+        font-style: italic;
+      }
+  </style>
+ </head>
+ <body>
+	<div id="main">
+		<header id="header">
+<!-- 			<iframe src="header.html" frameborder="0"></iframe> -->
+		</header>
+		<div id="register">
+		<table></table>
+		<div class="container">
+			<p class="title">用户注册</p>
+			<p class="title-top">注册用户名<span id="msgName"></span></p>
+			<p class="uname"><input type="text" name="uname" id="uname" placeholder="请输入您要注册的用户名"></p>
+			<p class="title-middle">注册密码<span></span></p>
+			<p class="upwd"><input type="password" name="upwd" id="upwd" placeholder="请输入您的密码"></p>
+			<p class="title-bottom">请再次输入密码<span id="yz"></span></p>
+			<p class="cpwd"><input type="password" name="cpwd" id="cpwd" placeholder="请再次确认您的密码"></p>
+			<p class="btn-top"><span>已有账号?</span><a href="login.html" target="_blank">立即登录</a></p>
+			<a href="#" id="register-btn">注册</a>
+		</div>
+	</div>
+		<footer id="footer">
+<!-- 			<iframe src="footer.html" frameborder="0"></iframe> -->
+		</footer>	
+	</div>
+	<script src="js/jquery.js"></script>
+	<script src="js/ajax.js"></script>
+	<script src="js/header.js"></script>
+	<script src="js/footer.js"></script>
+	<script>
+		var uname=document.getElementById("uname");
+		var msgName=document.getElementById("msgName");
+		uname.onblur=function(){
+			if(uname.value!=""){
+				ajax("get",
+					"data/checkUname.php?uname="+uname.value,
+					null,
+					"text")
+				.then(//然后
+					function(data){
+						if(data=="false"){
+							msgName.innerHTML="用户名已存在";
+							msgName.className="err";
+						}else{
+							msgName.innerHTML="验证通过";
+							msgName.className="ok";
+						}
+					})
+			}else msgName.innerHtml="";
+		}
+		var btn=document.getElementById("register-btn");
+		btn.onclick=function(){
+			ajax("get","data/register.php?uname="+uname.value+"&upwd="+upwd.value,null,"text")
+				.then(
+					function(data){
+						if(data=="false"){
+							btn.href="#";
+
+						}else{
+							alert("注册成功！请登录！");
+							location.href="login.html";
+						}
+					})
+		}
+		cpwd.onblur=function(){
+			var upwd = $("upwd").value;
+			var cpwd = $("cpwd").value;
+			var yz=document.getElementById("yz");
+			if(upwd!=cpwd){
+				yz.className="err";
+				$("yz").innerHTML="两次密码不一致！";
+			}else{
+				yz.className="ok";
+				$("yz").innerHTML="通过！";
+			}
+		}
+	</script>
+ </body>
+</html>

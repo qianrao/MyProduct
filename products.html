@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>商品列表</title>
+  <style></style>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/products.css">
+ </head>
+ <body>
+	<div id="main">
+		<header id="header"></header>
+		<section id="section">
+			<p id="banner">
+				<img src="img/product/banner.jpg">
+			</p>
+			<!--页面主体内容-->
+			<!--笔记本电脑列表-->
+			<div class="store_action">
+				<div class="store_action_left">
+					<div class="store_action_left_content">
+						<div id="plist">
+							<div class="salc_top">
+							产品护肤列表
+							</div>
+							<div class="salc_content">
+								<ul id="show-list">
+									<img class="loading" src="img/loading.gif">
+									<!--<li>
+										<a href="05-product-details.html?lid=${p.lid}" title="${p.title}">
+										  <img src="${p.sm}">
+										</a>
+										<p>
+										  <span class="price">¥${p.price}</span>
+										  <a href="05-product-details.html?lid=${p.lid}">${p.title}</a>
+										</p>
+										<div>
+										  <span class="reduce">-</span>
+										  <input type="text" value="1">
+										  <span class="add">+</span>
+										  <a href="#" class="addCart">加入购物车</a>
+										</div>
+									</li>-->
+									
+								</ul>
+							</div>
+							<!--分页条-->
+							<div id="pages">
+								<!-- <a href="#" class="previous disabled">上一页</a>
+								<a href="#" class="current">1</a>
+								<a href="#">2</a> -->
+								<!-- <a href="#" class="next">下一页</a> -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="store_action_right rt">
+					<div class="store_action_right_top">
+						<p><img src="img/product/foodstore_icon2.png" alt=""/>商家公告</p>
+					<div>
+						<p>本店推出全网最低价套餐，保证比其他平台的价格要低！</p>
+						<p>不要葱、姜、蒜等这些忌口暂时无法坐不了，敬请谅解！</p>
+						<p>晚上10点以后订餐需另加送餐费2元！谢谢合作！</p>
+					</div>
+				</div>
+				<div class="store_action_right_cart" id="cart" >
+					<div class="store_action_right_cart_top cart_content">
+						购物车 <span class="clear rt">清空</span>
+					</div>
+					<div class="store_action_right_cart_content">
+						<div></div>
+						<!--<div id="5">-->
+						<!--<span>精选双人餐</span>-->
+						<!--<div><span class="cart_reduc lf">-</span><input type="text" value="1" class="lf"/><span class="cart_add lf">+</span></div>-->
+						<!--<span class="rt pc">￥:<span class="cart_unit_price">20.00</span></span>-->
+						<!--</div>-->
+					</div>
+					<div class="sarc" id="total">
+						<div class="total_price lf">
+							<img src="img/product/foodstore_car_2.png" alt=""/>￥:<span>0.00</span>
+						</div>
+						<div class="settle lf">
+							<a href="cart.html" style="color:#fff;">去结算</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--商家-->
+		</section>
+		<footer id="footer"></footer>	
+	</div>
+	<script src="js/jquery.js"></script>
+	<script src="js/ajax.js"></script>
+	<script src="js/header.js"></script>
+	<script src="js/footer.js"></script>
+	<script src="js/product-list.js"></script>
+ </body>
+</html>

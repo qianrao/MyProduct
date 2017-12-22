@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>商品详情页</title>
+  <style></style>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/product-details.css">
+ </head>
+ <body>
+	<div id="main">
+		<header id="header"></header>
+		<section id="section">
+			<!--2、面包屑导航 ：#bread-crumb -->
+			<div id="bread-crumb">
+				<a href="index.html">美妆首页</a>
+				<span>&gt;</span>
+				<a href="product-details.html">商品详情</a>
+				<span>&gt;</span>
+				<a href="#">自然堂（CHANDO）</a>
+				<span>&gt;&gt;</span>
+				<span id="fname"></span>
+			</div>
+			<div id="product-details">
+				<div id="preview">
+					<div id="mediumDiv">
+						<img id="mImg" src="img/product/md/1.jpg" alt="">
+						<div id="mask"></div>
+						<div id="superMask"></div>
+					</div>
+					<div id="largeDiv"></div>
+					<h1>
+						<a href="" class="backward disabled"></a>
+						<a class="forward"></a>
+						<ul id="icon_list">
+							<!-- <li class="i1"><img src="${pic.sm}" data-md="${pic.md}" data-lg="${pic.lg}"></li> -->
+						</ul>
+					</h1>
+				</div>
+				<!--3.2 右上 ：文字信息 #show-details width:490px-->
+				<div id="show-details">
+					<h1></h1>
+					<h2>
+						<a href="#">自然堂（CHANDO）凝时鲜颜水乳套装（冰肌水+乳液+凝时三件套）（化妆品套装）</a>
+					</h2>
+					<div class="item hide" id="p-ad">自然更多彩，自然堂给你多彩生活！不用预付，不用等待，美丽即刻呈现！<a href="#"">【自营闪电发货，美丽不用等，提前购便宜】</a></div>
+					<div class="price">
+						<div class="stu-price">
+							<b>售价：</b>
+							<span>¥389.00</span>
+						</div>
+						<div class="promise">
+							<b>服务承诺：</b>
+							*退货补运费 *7天无忧退货 *24小时快速退款 *48小时发货
+						</div>
+					</div>
+					<!-- 客服 -->
+					<p class="parameter">
+						<b>客服：</b>
+						<span>联系客服</span>
+						<img src="img/product_detail/kefuf.gif">
+					</p>
+					<!-- 规格 -->
+					<div class="spec clear">
+						<p>规格：</p>
+						<div>
+							<!-- <a href="product-details.html?lib=${laptop.lid}" class=${
+							  laptop.lid===details.lid?"active":""
+							}>{laptop.spec}</a> -->
+						</div>
+					</div>
+					<!-- 数量 -->
+					<p class="account">
+						<span>数量：</span>
+						<button class="number-reduce numberMinus">-</button>
+						<input type="text" value="1" id="buy-num">
+						<button class="number-add numberAdd">+</button>
+					</p>
+					<!-- 购买部分 -->
+					<div class="shops">
+						<a href="#" class="buy" id="buy_now">立即购买</a>
+						<a href="#" class="cart" id="add_cart">
+							<img src="img/product_detail/product_detail_img7.png" alt="">加入购物车
+						</a>
+						<a href="#" class="collection" id="collect">
+							<img src="img/product_detail/product_detail_img6.png">
+							<br>
+							收藏
+						</a>
+					</div>
+				</div>
+				<!--3.3 下 ：为你推荐 #recommend -->
+				<!--为你推荐-->
+				<div id="recommended">
+					<p>为你推荐<span>大家都在看</span></p>
+					<div id="demo" style="width:1100px;overflow:hidden;">
+						<div id="indemo" style="float: left;width: 200%;">
+							<div id="demo1" style="float:left">
+								<!-- 第一个宽度显示 -->
+								<div class="detail_1 lf">
+									<div class="detail_img1">
+										<img src="img/product_detail/product-details1.png" border="0">
+									</div>
+									<p>水密码清新水润护肤</p>
+								</div>
+								<div class="detail_1 lf">
+									<div class="detail_img1">
+										<img src="img/product_detail/product-details2.png" border="0">
+									</div>
+									<p>自然堂凝时鲜颜水乳套装</p>
+								</div>
+								<div class="detail_1 lf">
+									<div class="detail_img1">
+										<img src="img/product_detail/product-details3.png" border="0">
+									</div>
+									<p>水密码升级清新水润护肤</p>
+								</div>
+								<div class="detail_1 lf">
+									<div class="detail_img1">
+										<img src="img/product_detail/product-details4.png" border="0">
+									</div>
+									<p>韩束 红石榴鲜活水盈护肤</p>
+								</div>
+							<!--</div>-->
+							</div>
+							<div id="demo2" style="float:left"></div>
+						</div>
+						<!-- 宽度超大 -->
+					</div>
+					<!-- 外面大框 -->
+				</div>
+				<div style="clear:both"></div>
+			</div>
+			<div id="detail-nav">
+				<div class="detail-list" id="tab">
+					<ul>
+						<li><a href="#f1">商品介绍</a></li>
+						<li><a href="#f2">规格包装</a></li>
+						<li><a href="#f3">售后保障</a></li>
+						<li><a href="#f4">商品评价(14万+)</a></li>
+						<li><a href="#f5">本店好评</a></li>
+					</ul>
+				</div>
+				<div class="details">
+					<div class="xinxi" id="f1" >
+						<h3>品牌: <a>自然堂(CHANDO)</a></h3>
+						<ul>
+							<li>商品名称：自然堂凝...</li>
+							<li>适合肤质：混合性</li>
+							<li>产品产地：中国大陆</li>
+						</ul>
+						<ul>
+							<li>商品编号：1609126</li>
+							<li>功效：提拉紧致，细...</li>
+						</ul>
+						<ul>
+							<li>商品毛重：1.04kg</li>
+							<li>性别：通用</li>
+						</ul>
+						<ul>
+							<li>商品产地：上海</li>
+							<li>礼品套装</li>
+						</ul>
+					</div>
+					<div class="details-pic" id="f2">
+						<div class="de-pic">
+							<img src="img/product_detail/pic/1.jpg" alt="">
+						</div>
+						<h1>产品信息</h1>
+						<h3>自然堂凝时鲜颜水乳套装(冰肌水160mL+乳液120mL+凝时三件套)</h3>
+						<div class="de-pic">
+							<img src="img/product_detail/pic/2.jpg" alt="">
+						</div>
+						<div class="plist">
+							<p class="title">产品信息</p>
+							<div class="de-pic">
+								<img src="img/product_detail/pic/3.jpg" alt="">
+							</div>
+						</div>
+						<div class="plist">
+							<p class="title">商品细节</p>
+							<div class="de-pic">
+								<img src="img/product_detail/pic/4.jpg" alt="">
+							</div>
+						</div>
+						<div class="plist">
+							<p class="title">商品细节</p>
+							<div class="de-pic">
+								<img src="img/product_detail/pic/5.jpg" alt="">
+							</div>
+						</div>
+						<div class="plist">
+							<p class="title">商品细节</p>
+							<div class="de-pic">
+								<img src="img/product_detail/pic/6.jpg" alt="">
+							</div>
+						</div>
+						<div class="plist">
+							<p class="title">商品细节</p>
+							<div class="de-pic">
+								<img src="img/product_detail/pic/7.jpg" alt="">
+							</div>
+						</div>
+						<div class="plist">
+							<p class="title">产品信息</p>
+							<div class="de-pic">
+								<img src="img/product_detail/pic/8.jpg" alt="">
+							</div>
+						</div>
+						<div class="plist">
+							<p class="title">商品细节</p>
+							<div class="de-pic">
+								<img src="img/product_detail/pic/9.jpg" alt="">
+							</div>
+						</div>
+						<div class="plist">
+							<p class="title">商品细节</p>
+							<div class="de-pic">
+								<img src="img/product_detail/pic/10.jpg" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="sale" >
+						<p class="title-sale" id="f3">售后保障</p>
+						<div class="text">
+							<h3>全国联保</h3>
+							<p>凭质保证书及京东商城发票，可享受全国联保服务（奢侈品、钟表除外；奢侈品、钟表由京东联系保修，享受法定三包售后服务），与您亲临商场选购的商品享受相同的质量保证。京东商城还为您提供具有竞争力的商品价格和运费政策，请您放心购买！ 
+							<br><br><br>
+							注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！
+
+							</p>
+							<h3>京东承诺</h3>
+							<p>京东平台卖家销售并发货的商品，由平台卖家提供发票和相应的售后服务。请您放心购买！
+							<br><br>
+							注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！
+
+							</p>	
+							<h3>正品行货</h3>
+							<p>京东商城向您保证所售商品均为正品行货，京东自营商品开具机打发票或电子发票。</p>
+							<h3>无忧退换货</h3>
+							<p>客户购买京东自营商品7日内（含7日，自客户收到商品之日起计算），在保证商品完好的前提下，可无理由退货。（部分商品除外，详情请见各商品细则）
+							 </p>
+							<h3>权利声明：</h3>
+							<p>京东上的所有商品信息、客户评价、商品咨询、网友讨论等内容，是京东重要的经营资源，未经许可，禁止非法转载使用。<br><br>
+							注：本站商品信息均来自于合作方，其真实性、准确性和合法性由信息拥有者（合作方）负责。本站不提供任何保证，并不承担任何法律责任。
+							 </p>
+							<h3>价格说明：</h3>
+							<p><b>东价：</b>京东价为商品的销售价，是您最终决定是否购买商品的依据。<br><br>
+						
+							<b>划线价：</b>商品展示的划横线价格为参考价，该价格可能是品牌专柜标价、商品吊牌价或由品牌供应商提供的正品零售价（如厂商指导价、建议零售价等）或该商品在京东平台上曾经展示过的销售价；由于地区、时间的差异性和市场行情波动，品牌专柜标价、商品吊牌价等可能会与您购物时展示的不一致，该价格仅供您参考。<br><br>
+
+							<b>折扣：</b>如无特殊说明，折扣指销售商在原价、或划线价（如品牌专柜标价、商品吊牌价、厂商指导价、厂商建议零售价）等某一价格基础上计算出的优惠比例或优惠金额；如有疑问，您可在购买前联系销售商进行咨询。<br><br>
+							
+							<b>异常问题：</b>商品促销信息以商品详情页“促销”栏中的信息为准；商品的具体售价以订单结算页价格为准；如您发现活动商品售价或促销信息有异常，建议购买前先联系销售商咨询。		</p>
+						</div>
+					</div>
+					<div class="evaluate" id="f4">
+						<p class="title-evaluate">商品评价</p>
+					</div>
+					<div class="evaluate" id="f5">
+						<p class="title-evaluate">本店好评</p>
+					</div>
+				</div>
+			</div>	
+		</section>
+		<footer id="footer"></footer>
+	</div>
+	<script src="js/ajax.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/header.js"></script>
+	<script src="js/footer.js"></script>
+	<!--图片轮播悬停进入详情页效果-->
+	<script>
+	  var speed = 20;
+	  var tab = document.getElementById("demo");
+	  var tab1 = document.getElementById("demo1");
+	  var tab2 = document.getElementById("demo2");
+	  tab2.innerHTML = tab1.innerHTML;
+	  function Marquee() {
+		if (tab2.offsetWidth - tab.scrollLeft <= 0)
+		  tab.scrollLeft -= tab1.offsetWidth
+		else {
+		  tab.scrollLeft++;
+		}
+	  }
+	  var MyMar = setInterval(Marquee, speed);
+	  tab.onmouseover = function () {
+		clearInterval(MyMar)
+	  };
+	  tab.onmouseout = function () {
+		MyMar = setInterval(Marquee, speed)
+	  };
+	</script>
+	<script src="js/product-details.js"></script>
+ </body>
+</html>

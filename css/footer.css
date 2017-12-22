@@ -1,0 +1,129 @@
+   /*页面尾部 footer begin*/
+
+	#footer{
+		width:1920px;
+		color:#fff;
+		margin:0 auto;
+	}
+	#list{
+		margin:0;
+		padding:0;
+		width:1300px;
+		margin:0 auto;
+		list-style:none;
+		overflow:hidden;
+		margin-top:40px;
+	}
+	#list li{
+		float:left;
+		width:310px;
+		text-align:center;
+	}
+	#list li h3{
+		margin-top:0px;
+		font-size:14px;
+		font-weight:normal;
+		color:#666;
+	}
+	/*<!--2、下：logo，买家帮助，客户端 -->*/
+	.foot_bj{
+		margin-top:20px;
+		width:1920px;
+		height:400px;
+		background:#000;
+	}
+	#foot{
+		width:1920px;
+		margin:0 auto;
+		padding-top:62px;
+		overflow:hidden;
+		color:#fff;
+		clear:both;
+		font-family:"microsoft yahei";
+	}
+	.foot_left {
+		float: left;
+		width: auto;
+		min-height: 100px;
+		margin-left:600px;
+	}
+	.foot_left ul {
+		float: left;
+		margin-right: 57px;
+		margin-bottom: 20px;
+		line-height: 26px;
+	}
+	.foot_left ul li {
+		height: 26px;
+		position: relative;
+		text-align: center;
+		list-style:none;
+	}
+	.foot_left ul li a {
+		color:#fff;
+		font: 14px simhei;
+		font-weight: inherit;
+		text-decoration:none;
+	}
+	.foot_left ul li a:hover {
+		color:red;
+		font: 14px simhei;
+		font-weight: inherit;
+		text-decoration:none;
+	}
+	#foot .service {
+		float: left;
+		text-align: center;
+		margin-top:200px;
+		width: 300px;
+		right:800px;
+		position: relative;
+	}
+	.service p {
+		margin-bottom: 11px;
+		color: #fff;
+		font: 16px simhei;
+		font-weight: inherit;
+	}
+	#foot .service img {
+		margin-bottom: 3px;
+		margin:-20px -290px 0 0;
+		cursor: pointer;
+	}
+	.footer_ser{
+		margin:0 auto;
+		width:900px;
+		height:30px;
+		line-height:30px;
+		background:gray;
+		display:block;
+	}
+	.footer_ser ul{
+		margin:0 auto;
+	}
+	.footer_ser ul li{
+		float:left;
+		width:100px;
+		list-style:none;
+	}
+	.footer_ser ul li a{
+		color:#fff;
+		font-size:16px;
+		text-decoration:none;
+	}
+	.footer_ser ul li a:hover{
+		color:blue;
+	}
+	/*版权*/
+	.record {
+		text-align: center;
+		clear: both;
+		line-height: 22px;
+		padding-bottom: 26px;
+		margin-top:40px;
+		display: block;
+		padding-left: 13px;
+		text-align: center;
+		width:900px;
+	}
+	/*页面尾部 footer end*/
